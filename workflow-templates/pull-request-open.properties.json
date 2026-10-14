@@ -1,0 +1,4 @@
+{
+  "name": "Assign pull request author",
+  "description": "Assign the author to a pull request when it is opened."
+}
