@@ -9,9 +9,10 @@ concurrency:
 
 jobs:
   label:
-    runs-on: ubuntu-22.04
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
     steps:
-      - uses: myparcelnl/actions/pr-label-by-review@v4
+      - uses: myparcelnl/actions/pr-label-by-review@v5
         with:
           app-id: ${{ secrets.MYPARCEL_APP_ID }}
           private-key: ${{ secrets.MYPARCEL_APP_PRIVATE_KEY }}

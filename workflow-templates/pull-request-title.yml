@@ -1,7 +1,7 @@
 name: 'Validate pull request title'
 
 on:
-  pull_request:
+  pull_request_target:
     types:
       - edited
       - opened
@@ -14,9 +14,9 @@ concurrency:
 
 jobs:
   validate:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: myparcelnl/actions/pr-validate-title-conventional@v4
+      - uses: myparcelnl/actions/pr-validate-title-conventional@v5
         with:
           app-id: ${{ secrets.MYPARCEL_APP_ID }}
           private-key: ${{ secrets.MYPARCEL_APP_PRIVATE_KEY }}

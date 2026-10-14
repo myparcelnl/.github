@@ -1,0 +1,4 @@
+{
+  "name": "Label pull request",
+  "description": "Add an approved or changes requested label to a pull request after each review."
+}

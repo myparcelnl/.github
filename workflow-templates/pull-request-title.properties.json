@@ -1,0 +1,4 @@
+{
+  "name": "Validate pull request title",
+  "description": "Check that the pull request title follows the conventional commits convention."
+}
